@@ -75,7 +75,7 @@ class InventorySystem {
         }
     }
 
-    public void applyDiscountAndPlaceOrder(String productName, int quantity, String couponCode) {
+    public void PlaceOrder(String productName, int quantity, String couponCode) {
         for (Product product : inventory) {
             if (product.name.equalsIgnoreCase(productName)) {
                 double discountedPrice = product.applyDiscount(couponCode);
@@ -138,7 +138,7 @@ public class Main {
                     System.out.print("Enter coupon code: ");
                     String orderCouponCode = scanner.nextLine();
 
-                    inventorySystem.applyDiscountAndPlaceOrder(productName, quantity, orderCouponCode);
+                    inventorySystem.PlaceOrder(productName, quantity, orderCouponCode);
                     break;
 
                 case 4:
